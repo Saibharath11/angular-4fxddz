@@ -21,7 +21,7 @@ export class NewCmpComponent implements OnInit {
     console.log(event1);
   }
   todayDate;
-  constructor(private myservice: MyserviceService) { }
+  constructor() { }
   ngOnInit() { 
       this.todayDate = this.myservice.showTodayDate(); 
    } 

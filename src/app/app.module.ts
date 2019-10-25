@@ -8,8 +8,9 @@ import { NewCmpComponent } from './new-cmp/new-cmp.component';
 import { ChangeTextDirective } from './change-text.directive';
 import { SqrtPipe } from './sqrt.pipe';
 import { MyserviceService } from './myservice.service';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
-  imports:      [ BrowserModule, FormsModule],
+  imports:      [ BrowserModule, FormsModule, HttpClientModule],
   declarations: [ AppComponent, NewCmpComponent, ChangeTextDirective, SqrtPipe],
   bootstrap:    [ AppComponent ],
   providers: [MyserviceService]

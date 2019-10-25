@@ -7,5 +7,10 @@
 </small>
 <h1>Extensively Used Language</h1>
 <b>Angular Current version is :{{64|sqrt}}</b>
-{{todayDate}}
+<h3>Users Data</h3>
+<ul>
+   <li *ngFor="let item of persondata; let i = index">
+      {{item.name}}
+   </li>
+</ul>
 <app-new-cmp></app-new-cmp>

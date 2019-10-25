@@ -8,15 +8,13 @@ import { MyserviceService } from './myservice.service';
 })
 export class AppComponent  {
   name = 'Angular';
-  todayDate;
-  constructor(private myservice: MyserviceService){}
-  ngOnInit()
-  {
-    this.todayDate = this.myservice.showTodayDate();
-    console.log(this.myservice.serviceproperty);
-    this.myservice.serviceproperty = "componentcreated";
-    this.componentproperty = this.myservice.serviceproperty;
-
-  }
+  public persondata = [];
+  constructor(private myservice: MyserviceService) {}
+   ngOnInit() {
+      this.myservice.getData().subscribe((data) => {
+         this.persondata = Array.from(Object.keys(data), k=>data[k]);
+         console.log(this.persondata);
+      });
+   }
   
 }
