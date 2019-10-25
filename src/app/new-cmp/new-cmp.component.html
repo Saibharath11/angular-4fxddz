@@ -1,0 +1,20 @@
+<p align="center">
+Angular (commonly referred to as "Angular 2+" or "Angular v2 and above")[4][5] is a TypeScript-based open-source web application framework led by the Angular Team at Google and by a community of individuals and corporations. Angular is a complete rewrite from the same team that built AngularJS.
+</p>
+<p align="center" class="new">
+  {{newcomponent}}
+</p>
+<div>
+  Angular-Releases:
+  <select (change)= "changeversions($event)">
+    <option *ngFor = "let I of angularrel">{{I}}</option>
+  </select>
+</div>
+<br>
+<div> 
+   <span *ngIf = "ist; then condition1 else condition2">Current Version of Angular is Angular8.</span> 
+   <ng-template #condition1>Current Version Of Angular is Angular 8.</ng-template> 
+   <ng-template #condition2>Current Version Of Angular is Angular 7.</ng-template>
+</div>
+<br>
+<button (click) = "myClickFunction($event)">Info-Button</button>
